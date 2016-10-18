@@ -1,6 +1,7 @@
 # Absolute-inline boxes
 
 To compute the static position of a box with
+initial values of
 `position:absolute` and `display:inline`
 (shortened to "absolute-inline box"),
 the user agent will perform layout computation on what is
