@@ -47,7 +47,7 @@
         </script>
 
         <div id="sidebar" class="sidebar">
-            <ul class="chapter"><li><a href="./introduction.html"><strong>1.</strong> Introduction</a></li><li><a href="./inline.html"><strong>2.</strong> Absolute-inline boxes</a></li><li><a href="./block.html"><strong>3.</strong> Absolute-block boxes</a></li><li><a href="./copyright.html"><strong>4.</strong> Copyright (0BSD)</a></li></ul>
+            <ul class="chapter"><li><a href="./introduction.html"><strong>1.</strong> Introduction</a></li><li><a href="./inline.html" class="active"><strong>2.</strong> Absolute-inline boxes</a></li><li><a href="./block.html"><strong>3.</strong> Absolute-block boxes</a></li><li><a href="./copyright.html"><strong>4.</strong> Copyright (0BSD)</a></li></ul>
         </div>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -67,16 +67,7 @@
                 </div>
 
                 <div id="content" class="content">
-                    <h1>Introduction</h1>
-<p>In the specification for <a href="https://www.w3.org/TR/css3-box/#abs-non-replaced-width">CSS Basic Box Model level 3 § 9.6</a>,
-this language is used to describe how to compute the static position of an
-absolutely positioned block:</p>
-<blockquote>
-<p>For the purposes of this section and the next, the term static position (of an element) refers, roughly, to the position an element would have had in the normal flow. [...] But rather than actually calculating the dimensions of that hypothetical box, user agents are free to make a guess at its probable position.</p>
-</blockquote>
-<p>This specification defines how to compute or guess static position.
-These algorithms need to be defined for web compatibility.</p>
-<h1>Absolute-inline boxes</h1>
+                    <h1>Absolute-inline boxes</h1>
 <p>To compute the static position of a box with
 <code>position:absolute</code> and <code>display:inline</code>
 (shortened to &quot;absolute-inline box&quot;),
@@ -119,64 +110,34 @@ of the hypothetical absolute-inline box.</p>
 <p>Note: Each absolute-inline box's static position is computed
 using a separate hypothetical formatting context.</p>
 </blockquote>
-<h1>Absolute-block boxes</h1>
-<p>To compute the static position of a box with
-<code>position:absolute</code> and <code>display:block</code>
-(shortened to &quot;absolute-block box&quot;),
-the user agent will perform layout computation on what is
-logically a copy of the its containing formatting context.
-Boxes in this copy are referred to as &quot;hypothetical boxes,&quot;
-while boxes in the original are referred to as &quot;real boxes.&quot;</p>
-<p>The hypothetical absolute-block box
-shall be its own statically positioned block formatting context.
-To compute its used width:</p>
-<ul>
-<li>If the computed value of the <code>width</code> property is set to a value other
-than <code>auto</code>, use that.</li>
-<li>Otherwise, if the properties <code>left</code> and <code>right</code> are both set,
-compute the horizontal constraints of the real absolute-inline box,
-then use its width.</li>
-<li>Otherwise, use the <a href="https://dbaron.org/css/intrinsic/">intrinsic</a> width of the real absolute-inline box.</li>
-</ul>
-<p>To compute the hypothetical absolute-block box's used height:</p>
-<ul>
-<li>If the computed value of the <code>height</code> property is set to a value other
-than <code>auto</code>, use that.</li>
-<li>Otherwise, if the properties <code>top</code> and <code>bottom</code> are both set,
-compute the vertical constraints of the real absolute-block box,
-then use its height.</li>
-<li>Otherwise, use the <a href="https://dbaron.org/css/intrinsic/">intrinsic</a> height of the real absolute-block box.</li>
-</ul>
-<p>Because the hypothetical absolute-block box is statically positioned,
-it is not subject to the absolute constraint equation itself, and, as a result,
-the used values for its margins will computed from the block constraint equations,
-and may be different from the real absolute-block box's margins.
-However, the used width and height of the hypothetical absolute-block box
-shall be the same as the used width and height of the real absolute-block box.</p>
-<p>All other hypothetical boxes will be identical to their real equivalents, except
-for the effect the presence of the hypothetical absolute-block box has
-on their layout.</p>
-<p>The static position of the real absolute-block box is the absolute position
-of the hypothetical absolute-block box.</p>
-<blockquote>
-<p>Note: Each absolute-block box's static position is computed
-using a separate hypothetical formatting context.</p>
-</blockquote>
-<h1>Copyright (C) 2016 the Servo developers</h1>
-<p>Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted.</p>
-<p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot; AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.</p>
 
                 </div>
 
                 <!-- Mobile navigation buttons -->
                 
+                    <a href="./introduction.html" class="mobile-nav-chapters previous">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
 
+                
+                    <a href="./block.html" class="mobile-nav-chapters next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                 
 
             </div>
 
             
+                <a href="./introduction.html" class="nav-chapters previous" title="You can navigate through the chapters using the arrow keys">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+            
 
+            
+                <a href="./block.html" class="nav-chapters next" title="You can navigate through the chapters using the arrow keys">
+                    <i class="fa fa-angle-right"></i>
+                </a>
             
 
         </div>
