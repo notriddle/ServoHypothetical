@@ -6,5 +6,6 @@ mv ../book/* .
 rm -rf ../book/
 git add .
 git commit -m "Update"
+git push
 git checkout master
 
