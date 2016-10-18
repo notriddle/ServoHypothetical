@@ -1,8 +1,8 @@
 # Absolute-block boxes
 
 To compute the static position of a box with
-initial values of
-`position:absolute` and `display:block`
+a computed value of `position:absolute` and
+hypothetical computed value of `display:block`
 (shortened to "absolute-block box"),
 the user agent will perform layout computation on what is
 logically a copy of the its containing formatting context.
