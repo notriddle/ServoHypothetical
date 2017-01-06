@@ -8,11 +8,9 @@ When this specification refers to the position-agnostic computed values
 for these properties,
 these values should be used:
 
-  * hypothetical value of display: the computed value of display
-    that would have resulted if § 9.7 had not been applied.
-  * hypothetical value of position: the keyword "static"
-  * hypothetical value of float: the computed value of display
-    that would have resulted if § 9.7 had not been applied.
+  * display: the computed value of display that would have resulted if § 9.7 had not been applied.
+  * position: the keyword "static"
+  * float: the computed value of display that would have resulted if § 9.7 had not been applied.
 
 [CSS level 2 § 9.7]: https://www.w3.org/TR/CSS2/visuren.html#dis-pos-flo
 
