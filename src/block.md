@@ -29,12 +29,10 @@ To compute the hypothetical absolute-block box's used height:
     then use its height.
   * Otherwise, use the [intrinsic] height of the real absolute-block box.
 
-Because the hypothetical absolute-block box is statically positioned,
-it is not subject to the absolute constraint equation itself, and, as a result,
-the used values for its margins will computed from the block constraint equations,
-and may be different from the real absolute-block box's margins.
-However, the used width and height of the hypothetical absolute-block box
-shall be the same as the used width and height of the real absolute-block box.
+The hypothetical absolute-inline box shall not have any margins,
+even if margins are specified.
+The real absolute-inline box may have margins,
+subject to the absolute constraint equation.
 
 All other hypothetical boxes will be identical to their real equivalents, except
 for the effect the presence of the hypothetical absolute-block box has
