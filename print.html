@@ -84,11 +84,9 @@ to avoid clashing values.</p>
 for these properties,
 these values should be used:</p>
 <ul>
-<li>hypothetical value of display: the computed value of display
-that would have resulted if § 9.7 had not been applied.</li>
-<li>hypothetical value of position: the keyword &quot;static&quot;</li>
-<li>hypothetical value of float: the computed value of display
-that would have resulted if § 9.7 had not been applied.</li>
+<li>display: the computed value of display that would have resulted if § 9.7 had not been applied.</li>
+<li>position: the keyword &quot;static&quot;</li>
+<li>float: the computed value of display that would have resulted if § 9.7 had not been applied.</li>
 </ul>
 <h1>Absolute-inline boxes</h1>
 <p>To compute the static position of a box with
@@ -119,12 +117,10 @@ compute the vertical constraints of the real absolute-inline box,
 then use its height.</li>
 <li>Otherwise, use the <a href="https://dbaron.org/css/intrinsic/">intrinsic</a> height of the real absolute-inline box.</li>
 </ul>
-<p>Because the hypothetical absolute-inline box is statically positioned inline,
-it is not subject to the absolute constraint equation itself, and, as a result,
-the used values for its margins will be the same as the computed values,
-and may be different from the real absolute-inline box's margins.
-However, the used width and height of the hypothetical absolute-inline box
-shall be the same as the used width and height of the real absolute-inline box.</p>
+<p>The hypothetical absolute-inline box shall not have any margins,
+even if margins are specified.
+The real absolute-inline box may have margins,
+subject to the absolute constraint equation.</p>
 <p>All other hypothetical boxes will be identical to their real equivalents, except
 for the effect the presence of the hypothetical absolute-inline box has
 on their layout.</p>
@@ -163,12 +159,10 @@ compute the vertical constraints of the real absolute-block box,
 then use its height.</li>
 <li>Otherwise, use the <a href="https://dbaron.org/css/intrinsic/">intrinsic</a> height of the real absolute-block box.</li>
 </ul>
-<p>Because the hypothetical absolute-block box is statically positioned,
-it is not subject to the absolute constraint equation itself, and, as a result,
-the used values for its margins will computed from the block constraint equations,
-and may be different from the real absolute-block box's margins.
-However, the used width and height of the hypothetical absolute-block box
-shall be the same as the used width and height of the real absolute-block box.</p>
+<p>The hypothetical absolute-inline box shall not have any margins,
+even if margins are specified.
+The real absolute-inline box may have margins,
+subject to the absolute constraint equation.</p>
 <p>All other hypothetical boxes will be identical to their real equivalents, except
 for the effect the presence of the hypothetical absolute-block box has
 on their layout.</p>
